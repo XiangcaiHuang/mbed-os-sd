@@ -14,7 +14,3 @@ The SD file system example is cloned from the FAT file system example released b
 1. You have to replace the mbed OS's sdhc driver by the NXP SDK's. They are in `./sd-driver-sd/driver-files-replacing/` folder
 	- `mbed-os/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_MCU_K64F/drivers/fsl_sdhc.c.file`
 	- `mbed-os/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_MCU_K64F/drivers/fsl_sdhc.h.file`
-
-2. You have to modify the file `.\mbed-os\features\filesystem\fat\FATFileSystem.cpp` in mbed OS if you want to use this driver with mbed OS's FatFS. Comment the following code in the function `disk_get_sector_count()`
-
-		// MBED_ASSERT(scount >= 64);
